@@ -67,11 +67,11 @@ public class User {
         this.email = email;
     }
 
-    public List<Review> getReviews() {
+    public List<Review> getReview() {
         return reviews;
     }
 
-    public void setReviews(List<Review> reviews) {
+    public void setReview(List<Review> reviews) {
         this.reviews = reviews;
     }
 }

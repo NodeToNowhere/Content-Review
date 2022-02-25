@@ -38,7 +38,7 @@ public class UserController {
         foundUser.setUsername(user.getUsername());
         foundUser.setPassword(user.getPassword());
         foundUser.setEmail(user.getEmail());
-        foundUser.setReviews(user.getReviews());
+        foundUser.setReview(user.getReview());
         userRepository.save(foundUser);
         return new ResponseEntity<>(foundUser, HttpStatus.OK);
     }
