@@ -16,7 +16,7 @@ public class ChannelController {
     ChannelRepository channelRepository;
 
 
-    @GetMapping("/Channels")
+    @GetMapping("/channels")
     public ResponseEntity<List<Channel>> getAllChannels(){
         return new ResponseEntity<>(channelRepository.findAll(), HttpStatus.OK);
     }
