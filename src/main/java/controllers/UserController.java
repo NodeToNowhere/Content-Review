@@ -35,10 +35,10 @@ public class UserController {
     @PutMapping(value = "/{id}")
     public ResponseEntity<User> putUser(@RequestBody User user, @PathVariable Long id){
         User foundUser = userRepository.findById(id).get();
-        foundUser.setUsername(User.getUsername());
-        foundUser.setPassword(User.getPassword());
-        foundUser.setEmail(User.getEmail());
-        foundUser.setReviews(User.getReviews());
+        foundUser.setUsername(user.getUsername());
+        foundUser.setPassword(user.getPassword());
+        foundUser.setEmail(user.getEmail());
+        foundUser.setReviews(user.getReviews());
         userRepository.save(foundUser);
         return new ResponseEntity<>(foundUser, HttpStatus.OK);
     }

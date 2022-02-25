@@ -15,7 +15,7 @@ public class User {
     private Long id;
 
     @Column(name = "username")
-    private String username;
+    private static String username;
 
     @Column(name = "password")
     private String password;
@@ -45,14 +45,13 @@ public class User {
         this.id = id;
     }
 
-    public static String getUsername() {
-        return username;
-    }
+    public String getUsername() {return username;}
 
     public void setUsername(String username) {
         this.username = username;
     }
-    public static String getPassword() {
+
+    public  String getPassword() {
         return password;
     }
 
@@ -60,7 +59,7 @@ public class User {
         this.password = password;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
@@ -68,7 +67,7 @@ public class User {
         this.email = email;
     }
 
-    public static List<Review> getReviews() {
+    public List<Review> getReviews() {
         return reviews;
     }
 
