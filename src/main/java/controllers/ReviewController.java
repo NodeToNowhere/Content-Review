@@ -32,7 +32,7 @@ public class ReviewController {
     }
 
     @PutMapping(value = "/reviews/{id}")
-    public ResponseEntity<Review> putBooking(@RequestBody Review review, @PathVariable Long id) {
+    public ResponseEntity<Review> putReview(@RequestBody Review review, @PathVariable Long id) {
         Review reviewToUpdate = reviewRepository.findById(id).get();
         reviewToUpdate.setComment(review.getComment());
         reviewToUpdate.setUpvotes(review.getUpvotes());
@@ -41,7 +41,7 @@ public class ReviewController {
         reviewRepository.save(reviewToUpdate);
         return new ResponseEntity<>(reviewToUpdate, HttpStatus.OK);
     }
-    @DeleteMapping(value="/bookings/{id}")
+    @DeleteMapping(value="/reviews/{id}")
     public ResponseEntity<Long> deleteReview(@PathVariable Long id){
         reviewRepository.deleteById(id);
         return new ResponseEntity<>(id, HttpStatus.OK);
