@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ChannelRepository extends JpaRepository<Channel, Long> {
-    List<Channel> findAllByRating(int rating);
+    List<Channel> findAllByRating(Integer rating);
 }

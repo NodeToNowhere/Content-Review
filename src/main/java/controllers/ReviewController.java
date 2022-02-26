@@ -1,7 +1,6 @@
 package controllers;
 
 import models.Review;
-import models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ public class ReviewController {
     }
 
     @GetMapping(value = "/reviews/{id}")
-    public ResponseEntity<User> getReview(@PathVariable Long id) {
+    public ResponseEntity<Review> getReview(@PathVariable Long id) {
         return new ResponseEntity(reviewRepository.findById(id), HttpStatus.OK);
     }
 
