@@ -1,7 +1,6 @@
 package controllers;
 
 
-import models.Review;
 import models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,7 @@ public class UserController {
     UserRepository userRepository;
 
     @GetMapping("/users")
-    public ResponseEntity<List<Review>> GetAllReviews(@RequestParam(name = "email", required = false) String email) {
+    public ResponseEntity<List<User>> GetAllReviews(@RequestParam(name = "email", required = false) String email) {
         if (email != null){
             return new ResponseEntity<>(userRepository.findAllByEmail(email), HttpStatus.OK);
         }
