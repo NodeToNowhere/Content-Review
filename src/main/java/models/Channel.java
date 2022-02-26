@@ -31,7 +31,7 @@ public class Channel {
         this.reviews = new ArrayList<Review>();
     }
 
-    public Channel(){
+    public Channel() {
 
     }
 
@@ -65,5 +65,9 @@ public class Channel {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
+    }
+
+    public void addReview(Review review) {
+        reviews.add(review);
     }
 }

@@ -15,7 +15,7 @@ public class User {
     private Long id;
 
     @Column(name = "username")
-    private static String username;
+    private String username;
 
     @Column(name = "password")
     private String password;
@@ -34,7 +34,7 @@ public class User {
         this.reviews = new ArrayList<Review>();
     }
 
-    public User(){
+    public User() {
     }
 
     public Long getId() {
@@ -45,13 +45,15 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {return username;}
+    public String getUsername() {
+        return username;
+    }
 
     public void setUsername(String username) {
         this.username = username;
     }
 
-    public  String getPassword() {
+    public String getPassword() {
         return password;
     }
 
@@ -74,6 +76,11 @@ public class User {
     public void setReview(List<Review> reviews) {
         this.reviews = reviews;
     }
+
+    public void addReview(Review review) {
+        reviews.add(review);
+    }
+
 }
 
 

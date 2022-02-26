@@ -25,7 +25,7 @@ public class Review {
     private User user;
 
     @ManyToOne
-    @JsonIgnoreProperties({"channel"})
+    @JsonIgnoreProperties({"reviews"})
     @JoinColumn(name = "channel_id", nullable = false)
     private Channel channel;
 
@@ -56,9 +56,13 @@ public class Review {
         this.comment = comment;
     }
 
-    public int getUpvotes() { return upvotes;}
+    public int getUpvotes() {
+        return upvotes;
+    }
 
-    public void setUpvotes(int upvotes) {this.upvotes = upvotes;}
+    public void setUpvotes(int upvotes) {
+        this.upvotes = upvotes;
+    }
 
     public User getUser() {
         return user;

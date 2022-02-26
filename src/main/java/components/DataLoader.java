@@ -21,11 +21,11 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     ReviewRepository reviewRepository;
 
-    public DataLoader(){
+    public DataLoader() {
 
     }
 
-    public void run(ApplicationArguments args){
+    public void run(ApplicationArguments args) {
 
         Channel channel1 = new Channel("Super Cool Dude", 4);
         channelRepository.save(channel1);
@@ -50,7 +50,6 @@ public class DataLoader implements ApplicationRunner {
         reviewRepository.save(review3);
 
     }
-
 
 
 }
