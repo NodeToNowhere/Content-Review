@@ -16,7 +16,10 @@ public class ReviewController {
     ReviewRepository reviewRepository;
 
     @GetMapping("/reviews")
-    public ResponseEntity<List<Review>> GetAllReviews() {
+    public ResponseEntity<List<Review>> GetAllReviews(@RequestParam(name = "Id", required = false) Long id) {
+        if (id != null){
+            return new ResponseEntity<>(reviewRepository.findAllById(id), HttpStatus.OK);
+        }
         return new ResponseEntity<>(reviewRepository.findAll(), HttpStatus.OK);
     }
 
