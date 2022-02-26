@@ -17,7 +17,10 @@ public class ChannelController {
 
 
     @GetMapping("/channels")
-    public ResponseEntity<List<Channel>> getAllChannels() {
+    public ResponseEntity<List<Channel>> getAllChannels(@RequestParam(name = "rating", required = false) Integer rating) {
+        if (rating != null) {
+            return new ResponseEntity<>(channelRepository.findAllByRating(rating), HttpStatus.OK);
+        }
         return new ResponseEntity<>(channelRepository.findAll(), HttpStatus.OK);
     }
 
