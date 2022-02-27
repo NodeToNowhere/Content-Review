@@ -12,6 +12,7 @@ import com.SoloGroup.TwitchReviewBackend.repositories.ReviewRepository;
 import com.SoloGroup.TwitchReviewBackend.repositories.UserRepository;
 
 @Component
+
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
