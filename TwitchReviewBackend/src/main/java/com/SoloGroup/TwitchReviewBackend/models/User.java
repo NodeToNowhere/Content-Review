@@ -1,6 +1,7 @@
 package com.SoloGroup.TwitchReviewBackend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class User {
 
     @JsonIgnoreProperties({"user"})
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @JsonManagedReference // annotation is part of bidirectional relationship
     private List<Review> reviews;
 
     public User(String username, String password, String email) {

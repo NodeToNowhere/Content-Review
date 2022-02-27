@@ -1,6 +1,8 @@
 package com.SoloGroup.TwitchReviewBackend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -20,15 +22,16 @@ public class Channel {
     @Column(name = "rating")
     private int rating;
 
-
     @JsonIgnoreProperties({"channel"})
     @OneToMany(mappedBy = "channel", fetch = FetchType.LAZY)
-    private List<com.SoloGroup.TwitchReviewBackend.models.Review> reviews;
+    @JsonManagedReference // annotation is part of bidirectional relationship
+    private List<Review> reviews;
+
 
     public Channel(String name, int rating) {
         this.name = name;
         this.rating = rating;
-        this.reviews = new ArrayList<com.SoloGroup.TwitchReviewBackend.models.Review>();
+        this.reviews = new ArrayList<Review>();
     }
 
     public Channel() {
@@ -59,15 +62,11 @@ public class Channel {
         this.rating = rating;
     }
 
-    public List<com.SoloGroup.TwitchReviewBackend.models.Review> getReviews() {
+    public List<Review> getReviews() {
         return reviews;
     }
 
-    public void setReviews(List<com.SoloGroup.TwitchReviewBackend.models.Review> reviews) {
-        this.reviews = reviews;
-    }
+    public void setReviews(List<Review> reviews) {this.reviews = reviews;}
 
-    public void addReview(com.SoloGroup.TwitchReviewBackend.models.Review review) {
-        reviews.add(review);
-    }
+    public void addReview(Review review) {reviews.add(review);}
 }

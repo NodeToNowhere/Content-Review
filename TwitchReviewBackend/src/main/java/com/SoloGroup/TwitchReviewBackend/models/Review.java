@@ -1,8 +1,11 @@
 package com.SoloGroup.TwitchReviewBackend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "reviews")
@@ -22,11 +25,13 @@ public class Review {
     @ManyToOne
     @JsonIgnoreProperties({"reviews"})
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference // annotation is part of bidirectional relationship
     private User user;
 
     @ManyToOne
     @JsonIgnoreProperties({"reviews"})
     @JoinColumn(name = "channel_id", nullable = false)
+    @JsonBackReference  // annotation is part of bidirectional relationship
     private Channel channel;
 
     public Review(String comment, int upvotes, User user, Channel channel) {
@@ -79,4 +84,7 @@ public class Review {
     public void setChannel(Channel course) {
         this.channel = course;
     }
+
+
 }
+

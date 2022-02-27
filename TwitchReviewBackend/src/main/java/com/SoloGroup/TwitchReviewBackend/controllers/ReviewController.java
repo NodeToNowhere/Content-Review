@@ -9,6 +9,7 @@ import com.SoloGroup.TwitchReviewBackend.repositories.ReviewRepository;
 
 import java.util.List;
 
+@RestController
 public class ReviewController {
 
     @Autowired
