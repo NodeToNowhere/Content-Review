@@ -34,6 +34,7 @@ public class Channel {
         this.reviews = new ArrayList<Review>();
     }
 
+
     public Channel() {
 
     }
