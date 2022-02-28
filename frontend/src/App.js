@@ -6,6 +6,7 @@ import ChannelPage from './views/ChannelPage';
 import UserPage from './views/UserPage';
 import SearchPage from './views/SearchPage';
 import LandingPage from './views/LandingPage';
+const API_KEY = process.env.REACT_API_KEY;
 
 
 
