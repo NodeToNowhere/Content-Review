@@ -18,9 +18,9 @@ const App = () => {
                   <Header />
                   <Routes>
                   <Route path="/" exact component={LandingPage} />
-                        <Route path="/ChannelPage" exact component={ChannelPage} />
-                        <Route path="/UserPage" exact component={UserPage} />
-                        <Route path="/SearchPage" exact component={SearchPage} />
+                        <Route path="/channels" exact component={ChannelPage} />
+                        <Route path="/users" exact component={UserPage} />
+                        <Route path="/search" exact component={SearchPage} />
                         </Routes>
               </div>
           </BrowserRouter>
