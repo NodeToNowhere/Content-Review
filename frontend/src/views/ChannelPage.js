@@ -1,9 +1,10 @@
 import React from 'react';
+import ChannelComponent from "../components/DataFetch/ChannelComponent";
 
     const ChannelPage = () => {
         return (
             <div>
-            ChannelPage
+            <ChannelComponent />
             </div>
         )
     }

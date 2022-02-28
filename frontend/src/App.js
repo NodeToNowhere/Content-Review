@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import ChannelPage from './views/ChannelPage/ChannelPage';
-import UserPage from './views/UserPage/UserPage';
-import SearchPage from './views/SearchPage/SearchPage';
-import LandingPage from './views/Landing Page/LandingPage';
+import ChannelPage from './views/ChannelPage';
+import UserPage from './views/UserPage';
+import SearchPage from './views/SearchPage';
+import LandingPage from './views/LandingPage';
 
 
 
