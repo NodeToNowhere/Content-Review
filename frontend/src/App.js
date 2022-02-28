@@ -6,6 +6,7 @@ import ChannelPage from './views/ChannelPage';
 import UserPage from './views/UserPage';
 import SearchPage from './views/SearchPage';
 import LandingPage from './views/LandingPage';
+import Sidebar from './components/SideBar';
 const API_KEY = process.env.REACT_API_KEY;
 
 
@@ -17,6 +18,7 @@ const App = () => {
           <BrowserRouter>
               <div>
                   <Header />
+                  <Sidebar />
                   <Routes>
                   <Route path="/" exact component={LandingPage} />
                         <Route path="/channels" exact component={ChannelPage} />
