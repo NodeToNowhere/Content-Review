@@ -12,6 +12,7 @@ const Header = () => {
           src = {image}
         />
         <h2>Home</h2>
+        <div className="header__verticalLine"></div>
         <h2>Channels</h2>
         <div className="header__verticalLine"></div>
         <h2>User</h2>
@@ -21,13 +22,12 @@ const Header = () => {
         <input type="text" placeholder="Search" />
         <i className="fas fa-Search"></i>
       </div>
-
+      
       <div className="header__right">
         {/* Google Auth here */}
-        <div className="header__rightBits">
-          <i className="fas fa-gem"></i>
+        <div className="header__rightContainer">
           <Avatar />
-        </div>
+          </div>
       </div>
     </div>
   );

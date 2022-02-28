@@ -21,6 +21,10 @@
 .header__left > h2 {
   margin: 15px;
 }
+.header__verticalLine{
+    border-left: 1px solid #4a4a4c;
+  height: 3rem;
+}
 .vl {
   border-left: 1px solid #4a4a4c;
   height: 3rem;
