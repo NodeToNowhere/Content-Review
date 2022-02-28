@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Avatar } from '@material-ui/core'
 import "./Header.css";
+import image from '../assets/OC.png'
 
 const Header = () => {
   return (
@@ -8,11 +9,11 @@ const Header = () => {
       <div className="header__left">
         <img
           className="header__leftLogo"
-          src="../assets/OC.png"
-          alt="OC logo"
+          src = {image}
         />
         <h2>Home</h2>
         <h2>Channels</h2>
+        <div className="header__verticalLine"></div>
         <h2>User</h2>
       </div>
 
@@ -22,8 +23,11 @@ const Header = () => {
       </div>
 
       <div className="header__right">
-        <img src="profilepic.jpg" />
         {/* Google Auth here */}
+        <div className="header__rightBits">
+          <i className="fas fa-gem"></i>
+          <Avatar />
+        </div>
       </div>
     </div>
   );
