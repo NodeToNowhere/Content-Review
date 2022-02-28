@@ -1,11 +1,12 @@
 
 import './App.css';
+import UserComponent from './components/UserComponent';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <UserComponent />
     </div>
   );
 }
