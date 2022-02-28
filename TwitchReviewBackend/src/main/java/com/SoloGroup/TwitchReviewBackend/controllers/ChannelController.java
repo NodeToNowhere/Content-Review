@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.SoloGroup.TwitchReviewBackend.repositories.ChannelRepository;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:3030")
 @RestController
 public class ChannelController {
 
