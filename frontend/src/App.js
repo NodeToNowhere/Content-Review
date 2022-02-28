@@ -1,20 +1,33 @@
-
-import './App.css';
 import React from 'react';
-import ChannelComponent from './components/ChannelComponent';
-import ReviewComponent from './components/ReviewComponent';
-import UserComponent from './components/UserComponent';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Header from './components/Header';
+import ChannelPage from './views/ChannelPage/ChannelPage';
+import UserPage from './views/UserPage/UserPage';
+import SearchPage from './views/SearchPage/SearchPage';
+import LandingPage from './views/Landing Page/LandingPage';
 
-function App() {
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <ReviewComponent />
-      <ChannelComponent />
-      <UserComponent />
-    </div>
+      <div>
+          <BrowserRouter>
+              <div>
+                  <Header />
+                  <Routes>
+                  <Route path="/" exact component={LandingPage} />
+                        <Route path="/ChannelPage" exact component={ChannelPage} />
+                        <Route path="/UserPage" exact component={UserPage} />
+                        <Route path="/SearchPage" exact component={SearchPage} />
+                        </Routes>
+              </div>
+          </BrowserRouter>
+      </div>
   );
 }
 
-
-
 export default App;
+
+
