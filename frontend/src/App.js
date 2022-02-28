@@ -1,14 +1,20 @@
 
 import './App.css';
+import React from 'react';
+import ChannelComponent from './components/ChannelComponent';
+import ReviewComponent from './components/ReviewComponent';
+import UserComponent from './components/UserComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <ReviewComponent />
+      <ChannelComponent />
+      <UserComponent />
     </div>
   );
 }
+
 
 
 export default App;
