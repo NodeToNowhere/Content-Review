@@ -8,11 +8,11 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar__top">
         <h5>Reviewed Channels</h5>
-        <Channel avatar={image} name="NodeToNowhere" followers="816k" />{" "}
-        <Channel avatar={image} name="NodeToNowhere" followers="816k" />{" "}
+        <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
+        <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <h5>Recommended Channels</h5>{" "}
-        <Channel avatar={image} name="NodeToNowhere" followers="816k" />{" "}
-        <Channel avatar={image} name="NodeToNowhere" followers="816k" />{" "}
+        <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
+        <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <p className="sidebar__topShowMore">Show More</p>{" "}
       </div>{" "}
       <div className="sidebar__bottom">

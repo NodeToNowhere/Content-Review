@@ -1,16 +1,13 @@
 import React from "react";
-import { Avatar } from '@material-ui/core'
+import { Avatar } from "@material-ui/core";
 import "./Header.css";
-import image from '../assets/OC.png'
+import image from "../assets/OC.png";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="header__left">
-        <img
-          className="header__leftLogo"
-          src = {image}
-        />
+        <img className="header__leftLogo" src={image} />
         <h2>Home</h2>
         <div className="header__verticalLine"></div>
         <h2>Channels</h2>
@@ -22,12 +19,12 @@ const Header = () => {
         <input type="text" placeholder="Search" />
         <i className="fas fa-Search"></i>
       </div>
-      
+
       <div className="header__right">
         {/* Google Auth here */}
         <div className="header__rightContainer">
           <Avatar />
-          </div>
+        </div>
       </div>
     </div>
   );

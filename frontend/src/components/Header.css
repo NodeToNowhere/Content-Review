@@ -12,7 +12,12 @@
   display: flex;
   align-items: center;
   flex: 1;
+  
 }
+
+.header_left:hover {
+    background-color: #25252c;
+  }
 .header__leftLogo {
   object-fit: contain;
   height: 3rem;
@@ -21,8 +26,8 @@
 .header__left > h2 {
   margin: 15px;
 }
-.header__verticalLine{
-    border-left: 1px solid #4a4a4c;
+.header__verticalLine {
+  border-left: 1px solid #4a4a4c;
   height: 3rem;
 }
 .vl {
