@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Stream.css";
 // import axios from "./axios";
-// import { SettingsBackupRestoreTwoTone } from "@material-ui/icons";
-// import VideoEmbed from "./VideoEmbed";
+
 
 const Stream = () => {
   return (
@@ -12,11 +11,10 @@ const Stream = () => {
           <div className="stream__statusContainer">
             <div className="stream__statusContainerTop">
               <div className="stream__statusIndicator">OFFLINE</div>
-              <h2>Check out the below streams from NodeToNowhere</h2>
+              <h2>Bio Here</h2>
             </div>
             <div className="stream__statusInfo">
-              <i className="fas fa-bell"></i>
-              <p>You will be notified when NodeToNowhere is live</p>
+              <p>Top Review</p>
             </div>
           </div>
         </div>
@@ -24,7 +22,8 @@ const Stream = () => {
           <iframe
             width="500"
             height="295"
-            src="YOUR-YT-EMBED-LINK"
+            src="LINK"
+            // Twitch api stream
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

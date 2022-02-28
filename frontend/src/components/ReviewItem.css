@@ -10,8 +10,3 @@
   display: flex;
   margin-top: 25px;
 }
-.item__details > img {
-  object-fit: contain;
-  height: 60px;
-  margin-right: 10px;
-}

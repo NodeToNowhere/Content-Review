@@ -12,12 +12,11 @@
   display: flex;
   align-items: center;
   flex: 1;
-  
 }
 
 .header_left:hover {
-    background-color: #25252c;
-  }
+  background-color: #25252c;
+}
 .header__leftLogo {
   object-fit: contain;
   height: 3rem;
