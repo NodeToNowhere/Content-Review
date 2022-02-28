@@ -1,20 +1,18 @@
-
-import './App.css';
-import React from 'react';
-import ChannelComponent from './components/ChannelComponent';
-import ReviewComponent from './components/ReviewComponent';
-import UserComponent from './components/UserComponent';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Sidebar from "./components/SideBar";
 
 function App() {
   return (
     <div className="App">
-      <ReviewComponent />
-      <ChannelComponent />
-      <UserComponent />
+      <Header />
+      <div className="app__main">
+        <Sidebar />
+        <Body />
+      </div>
     </div>
   );
 }
-
-
-
 export default App;

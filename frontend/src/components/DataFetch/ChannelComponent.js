@@ -1,4 +1,4 @@
-import ChannelService from "../services/ChannelService";
+import ChannelService from "../../services/ChannelService";
 import React from "react";
 
 class UserComponent extends React.Component {
