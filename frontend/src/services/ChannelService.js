@@ -1,11 +1,25 @@
-import axios from "axios";
-
-const CHANNELS_REST_API = "http://localhost:8080/channels";
-
-class ChannelService {
-  getChannels() {
-    return axios.get(CHANNELS_REST_API);
+import http from "../http-common";
+class ChannelsDataService {
+  getAll() {
+    return http.get("/channels");
+  }
+  get(id) {
+    return http.get(`/channels/${id}`);
+  }
+  create(data) {
+    return http.post("/channels", data);
+  }
+  update(id, data) {
+    return http.put(`/channels/${id}`, data);
+  }
+  delete(id) {
+    return http.delete(`/channels/${id}`);
+  }
+  deleteAll() {
+    return http.delete(`/channels`);
+  }
+  findByName(Name) {
+    return http.get(`/channels?title=${Name}`);
   }
 }
-
-export default new ChannelService();
+export default new ChannelsDataService();
