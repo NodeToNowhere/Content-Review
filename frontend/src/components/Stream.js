@@ -2,18 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Stream.css";
 // import axios from "./axios";
 
-
 const Stream = () => {
   return (
     <div className="stream">
       <div className="stream__container">
-        <div className="stream__status">
-          <div className="stream__statusContainer">
-            <div className="stream__statusContainerTop">
-              <div className="stream__statusIndicator">OFFLINE</div>
-              <h2>Bio Here</h2>
+        <div className="stream__review">
+          <div className="stream__reviewContainer">
+            <div className="stream__reviewContainerTop">
+              <h2>Review form</h2>
             </div>
-            <div className="stream__statusInfo">
+            <div className="stream__reviewForm">
               <p>Top Review</p>
             </div>
           </div>

@@ -10,7 +10,6 @@ const Body = () => {
         <Stream />
         <Profile />
       </div>
-      <div className="body_rightPlaceHolder"></div>
     </div>
   );
 };
