@@ -7,19 +7,18 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-      {/* user reviews call */}
+        {/* user reviews call */}
         <h5>Reviewed Channels</h5>
+        <hl className="horizontal__line"></hl>
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         {/* High rating DB randoms */}
         <h5>Recommended Channels</h5>{" "}
+        <hl className="horizontal__line"></hl>
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         {/* <p className="sidebar__topShowMore">Show More</p>{" "} */}
       </div>{" "}
-      <div className="sidebar__bottom">
-        <div className="sidebar__bottomContainer"></div>
-      </div>
     </div>
   );
 };

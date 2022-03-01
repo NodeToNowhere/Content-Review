@@ -1,14 +1,15 @@
 import React from "react";
 import "./Channel.css";
+import { NavLink } from "react-router-dom";
 
-const Channel = ({ avatar, name, rating }) => {
+const Channel = ({ id, name, rating, avatar }) => {
   return (
     <div className="channel">
-      <div className="channel__details">
+      <NavLink to="/channels/{id}" className="channel" activeClassName="active" exact>
         <img src={avatar} alt="avatar" />
         <p>{name}</p>
-      </div>
       <p>⭐ {rating}</p>
+        </NavLink>
     </div>
   );
 };
