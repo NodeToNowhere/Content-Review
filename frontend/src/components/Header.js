@@ -9,7 +9,7 @@ const Header = () => {
     <div className="header">
       <div className="header__left">
         {/* set links + routes */}
-        <img className="header__leftLogo" src={image} />
+        <img className="header__leftLogo" src={image} alt="logo"/>
         <NavLink to="/" className="link" activeClassName="active" exact>
           <h2>Home</h2>
         </NavLink>
