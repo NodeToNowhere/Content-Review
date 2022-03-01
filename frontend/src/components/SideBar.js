@@ -9,10 +9,12 @@ const Sidebar = () => {
       <div className="sidebar__top">
         {/* user reviews call */}
         <h5>Reviewed Channels</h5>
+        <hl className="horizontal__line"></hl>
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         {/* High rating DB randoms */}
         <h5>Recommended Channels</h5>{" "}
+        <hl className="horizontal__line"></hl>
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         {/* <p className="sidebar__topShowMore">Show More</p>{" "} */}
