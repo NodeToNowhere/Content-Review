@@ -1,14 +1,19 @@
 import React from "react";
 import "./ReviewItem.css";
 
-const ReviewItem = ({ review, user }) => {
+const ReviewItem = ({ review, user, rating }) => {
   return (
     <div className="item">
-        {review}
-        <div className="item__detailsText">
-          <h4>{user}</h4>
-        </div>
+      <div className="item__detailsUser">
+        <h5>{user}</h5>
       </div>
+      <div className="item__detailsRating">
+        <h5>{rating}</h5>
+      </div>
+      <div className="item__detailsReview">
+        <h5>{review}</h5>
+      </div>
+    </div>
   );
 };
 

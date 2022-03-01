@@ -6,35 +6,32 @@
 .stream__container {
   display: flex;
 }
-.stream__status {
+.stream__review {
   width: 400px;
   height: 295px;
   background-color: #1f1f23;
   margin-right: 30px;
 }
-.stream__statusContainer {
+.stream__reviewContainer {
   margin: 25px;
   display: flex;
   flex-direction: column;
   height: 245px;
 }
-.stream__statusIndicator {
-  background-color: white;
+.stream__reviewForm {
   color: #1f1f23;
   border-radius: 8px;
   width: fit-content;
   padding: 5px 10px;
 }
-.stream__statusContainerTop {
+.stream__reviewContainerTop {
   flex: 1;
 }
-.stream__statusInfo {
+.stream__reviewInfo {
   display: flex;
   align-items: center;
 }
-.stream__statusInfo > i {
-  margin-right: 20px;
-}
+
 .stream__status > div > div > h2 {
   font-size: 35px;
 }

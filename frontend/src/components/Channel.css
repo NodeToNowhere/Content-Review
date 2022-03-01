@@ -13,7 +13,6 @@
 .channel__details {
   display: flex;
   align-items: center;
-  
 }
 .channel > div > img {
   object-fit: contain;

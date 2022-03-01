@@ -1,7 +1,6 @@
 import React from "react";
 import "./Profile.css";
-// import { LiteYouTubeEmbed } from "react-lite-youtube-embed";
-import RecentItem from "./ReviewItem";
+import ReviewItem from "./ReviewItem";
 import image from "../assets/OC.png";
 
 const Profile = () => {
@@ -12,22 +11,23 @@ const Profile = () => {
           <img src={image} />
           <div className="profile__topLeftDetails">
             <h1>NodeToNowhere</h1> 
-            {/* set state */}
+            {/* set name  */}
             <h3>100 followers</h3>
-             {/* api call */}
+             {/* api call twitch*/}
           </div>
         </div>
         <div className="profile__topRight">
+        {/* add favourite */}
           <i className="fas fa-heart graybg"></i>
         </div>
       </div>
       <div className="profile__recent">
         <h2>Recent Reviews</h2>
-        <div className="profile__recentItems">
-          <RecentItem review={"review"} user={"user"} />
-          <RecentItem review={"review"} user={"user"} />
-          <RecentItem review={"review"} user={"user"} />
-          <RecentItem review={"review"} user={"user"} />{" "}
+        <div className="profile__reviewItems">
+          <ReviewItem review={"review"} user={"user"} rating={"5"}/>
+          <ReviewItem review={"review"} user={"user"} rating={"5"}/>
+          <ReviewItem review={"review"} user={"user"} rating={"5"}/>
+          <ReviewItem review={"review"} user={"user"} rating={"5"}/>{" "}
         </div>
         </div>
       </div>
