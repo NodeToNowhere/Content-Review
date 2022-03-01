@@ -1,5 +1,5 @@
 import http from "../http-common";
-class ChannelsDataService {
+class ChannelsService {
   getAll() {
     return http.get("/channels");
   }
@@ -19,7 +19,7 @@ class ChannelsDataService {
     return http.delete(`/channels`);
   }
   findByName(Name) {
-    return http.get(`/channels?title=${Name}`);
+    return http.get(`/channels?name=${Name}`);
   }
 }
-export default new ChannelsDataService();
+export default new ChannelsService();

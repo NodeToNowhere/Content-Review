@@ -1,5 +1,5 @@
 import http from "../http-common";
-class ReviewsDataService {
+class ReviewsService {
   getAll() {
     return http.get("/reviews");
   }
@@ -22,4 +22,4 @@ class ReviewsDataService {
     return http.get(`/reviews?title=${username}`);
   }
 }
-export default new ReviewsDataService();
+export default new ReviewsService();
