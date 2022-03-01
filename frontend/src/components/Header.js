@@ -19,7 +19,7 @@ const Header = () => {
         </NavLink>
         <div className="header__verticalLine"></div>
         <NavLink
-          to="/user/{id}"
+          to="/user"
           className="link"
           activeClassName="active"
           exact

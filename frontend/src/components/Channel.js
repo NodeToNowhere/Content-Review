@@ -8,8 +8,8 @@ const Channel = ({ id, name, rating, avatar }) => {
       <NavLink to="/channels/{id}" className="channel" activeClassName="active" exact>
         <img src={avatar} alt="avatar" />
         <p>{name}</p>
-        </NavLink>
       <p>⭐ {rating}</p>
+        </NavLink>
     </div>
   );
 };
