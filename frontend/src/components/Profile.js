@@ -8,7 +8,7 @@ const Profile = () => {
     <div className="profile">
       <div className="profile__top">
         <div className="profile__topLeft">
-          <img src={image} />
+          <img src={image} alt="profile_img" />
           <div className="profile__topLeftDetails">
             <h1>NodeToNowhere</h1> 
             {/* set name  */}

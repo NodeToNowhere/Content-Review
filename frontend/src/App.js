@@ -1,25 +1,43 @@
-import React from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Body from "./components/Body";
-import Sidebar from "./components/SideBar";
+import ChannelsService from "./services/ChannelService";
+import UsersService from "./services/UserService";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./views/LandingPage";
+import ChannelPage from "./views/ChannelPage";
+import UserPage from "./views/UserPage";
+import { Switch } from "@material-ui/core";
 
-function App() {
+function App (){
+  const [channels, setChannels] = useState([]);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    retrieveChannels();
+    retrieveUsers();
+  }, []);
+
+  const retrieveChannels = () => {
+    ChannelsService.getAll().then((response) => {
+      setChannels(response.data);
+      console.log(response.data);
+    });
+  };
+  const retrieveUsers = () => {
+    UsersService.getAll().then((response) => {
+      setUsers(response.data);
+      console.log(response.data);
+    });
+  };
+
   return (
-    
-    <div className="App">
-      <Header />
-      <div className="app__main">
-        <Sidebar />
-        <Body />
-        {/* <routes>
-        <Route path="/" element={<home/>}/>
-        <Route path="/channel/{id}" element={<channel/>}/>
-        <Route path="/user/{id}" element={<user/>}/>
-        </routes> */}
-      </div>
-    </div>
-    
+    <Routes>
+      <Fragment>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/channels" element={<ChannelPage />} />
+        <Route exact path="/User" element={<UserPage />} />
+      </Fragment>
+    </Routes>
   );
-}
+};
 export default App;

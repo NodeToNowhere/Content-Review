@@ -1,5 +1,5 @@
 import http from "../http-common";
-class UsersDataService {
+class UsersService {
   getAll() {
     return http.get("/users");
   }
@@ -18,8 +18,8 @@ class UsersDataService {
   deleteAll() {
     return http.delete(`/users`);
   }
-  findByName(Name) {
-    return http.get(`/users?title=${Name}`);
+  findByName(Username) {
+    return http.get(`/users?username=${Username}`);
   }
 }
-export default new UsersDataService();
+export default new UsersService();
