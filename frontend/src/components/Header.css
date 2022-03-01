@@ -78,3 +78,13 @@
   margin: 20px;
 }
 
+.link {
+  margin: 20px;
+  cursor: pointer;
+  color: #252424;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #25252c;
+}
