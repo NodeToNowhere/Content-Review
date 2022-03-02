@@ -1,8 +1,7 @@
 import React from "react";
 import "./Stream.css";
 
-
-const Stream = (channel) => {
+function Stream(channel) {
   return (
     <div className="stream">
       <div className="stream__container">
@@ -17,7 +16,8 @@ const Stream = (channel) => {
           </div>
         </div>
         <div className="stream__videoEmbed">
-          <iframe title="twitch__stream"
+          <iframe
+            title="twitch__stream"
             width="500"
             height="295"
             src="LINK"
@@ -30,6 +30,6 @@ const Stream = (channel) => {
       </div>
     </div>
   );
-};
+}
 
 export default Stream;

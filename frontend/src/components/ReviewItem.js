@@ -1,7 +1,7 @@
 import React from "react";
 import "./ReviewItem.css";
 
-const ReviewItem = ({ review, user, rating }) => {
+function ReviewItem({ review, user, rating }) {
   return (
     <div className="item">
       <div className="item__detailsUser">
@@ -15,6 +15,6 @@ const ReviewItem = ({ review, user, rating }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ReviewItem;
