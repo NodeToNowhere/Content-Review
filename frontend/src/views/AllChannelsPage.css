@@ -1,0 +1,18 @@
+.AllChannels__main {
+    display: flex;
+  }
+  
+
+  .channelList__container {
+    background-color: #0e0e10;
+  }
+
+  .AllChannels {
+    background-color: rgb(248, 87, 240);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='200px'><text x='15' y='27%' fill='white' font-size='4rem' font-weight='600' opacity='0.1' font-family='Roobert,Helvetica Neue,Helvetica,Arial,sans-serif'>Chan OurChan OurChan OurChan OurChan OurChan OurChan OurChan </text><text x='5' y='60%' fill='white' font-size='4rem' font-weight='600' opacity='0.1' font-family='Roobert,Helvetica Neue,Helvetica,Arial,sans-serif'>urChan OurChan OurChan OurChan OurChan OurChan OurChan NodeToNo</text><text x='0' y='93%' fill='white' font-size='4rem' font-weight='600' opacity='0.1' font-family='Roobert,Helvetica Neue,Helvetica,Arial,sans-serif'>Chan OurChan OurChan OurChan OurChan OurChan OurChan OurChan OurChan</text></svg>");
+    flex: 1;
+    height: 100vh;
+    overflow: scroll;
+  }
+  
+  

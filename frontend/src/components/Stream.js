@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Stream.css";
-// import axios from "./axios";
 
-const Stream = () => {
+
+const Stream = (channel) => {
   return (
     <div className="stream">
       <div className="stream__container">
@@ -17,7 +17,7 @@ const Stream = () => {
           </div>
         </div>
         <div className="stream__videoEmbed">
-          <iframe
+          <iframe title="twitch__stream"
             width="500"
             height="295"
             src="LINK"
