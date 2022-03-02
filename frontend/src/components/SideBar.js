@@ -1,9 +1,9 @@
 import React from "react";
 import Channel from "./Channel";
-import "./SideBar.css";
+import "../stylesheets/SideBar.css";
 import image from "../assets/OC.png";
 
-function Sidebar(channels, user) {
+function Sidebar({channels, users}) {
   return (
     <div className="sidebar">
       <div className="sidebar__top">

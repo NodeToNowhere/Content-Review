@@ -1,5 +1,5 @@
 import React from "react";
-import "./Channel.css";
+import "../stylesheets/Channel.css";
 import { NavLink } from "react-router-dom";
 
 function Channel({ id, name, rating, avatar }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Body.css";
+import "../stylesheets/Body.css";
 
 function BlankBody() {
   return (

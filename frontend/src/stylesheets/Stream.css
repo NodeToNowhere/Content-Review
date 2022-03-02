@@ -32,9 +32,6 @@
   align-items: center;
 }
 
-.stream__status > div > div > h2 {
-  font-size: 35px;
-}
 .stream__video {
   height: 295px;
   width: 500px;

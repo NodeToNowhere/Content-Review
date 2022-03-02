@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import "./Header.css";
+import "../stylesheets/Header.css";
 import image from "../assets/OC.png";
 import { NavLink } from "react-router-dom";
 

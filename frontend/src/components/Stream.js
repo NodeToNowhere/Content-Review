@@ -1,7 +1,7 @@
 import React from "react";
-import "./Stream.css";
+import "../stylesheets/Stream.css";
 
-function Stream(channel) {
+function Stream({channel}) {
   return (
     <div className="stream">
       <div className="stream__container">
