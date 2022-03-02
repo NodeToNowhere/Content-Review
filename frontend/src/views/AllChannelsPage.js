@@ -3,12 +3,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/SideBar";
 import "./AllChannelsPage.css";
 
-
-const AllChannelsPage = ({ channels }) => {
-  
-
-
-
+function AllChannelsPage({ channels }) {
   return (
     <div className="AllChannels">
       <Header />
@@ -17,6 +12,6 @@ const AllChannelsPage = ({ channels }) => {
       </div>
     </div>
   );
-};
+}
 
 export default AllChannelsPage;
