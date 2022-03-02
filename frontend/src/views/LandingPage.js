@@ -4,12 +4,12 @@ import BlankBody from "../components/BlankBody";
 import Sidebar from "../components/SideBar";
 import "./LandingPage.css";
 
-function LandingPage(channels) {
+function LandingPage({channels, users}) {
   return (
     <div className="landingPage">
       <Header />
       <div className="landing__main">
-        <Sidebar />
+        <Sidebar channels={channels} users={users}/>
         <BlankBody />
       </div>
     </div>

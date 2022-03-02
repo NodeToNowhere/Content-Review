@@ -4,12 +4,12 @@ import Body from "../components/Body";
 import Sidebar from "../components/SideBar";
 import "./ChannelPage.css";
 
-function ChannelPage(channel) {
+function ChannelPage({channels, users}) {
   return (
     <div className="channelPage">
       <Header />
       <div className="channel__main">
-        <Sidebar />
+        <Sidebar channels={channels} users={users}/>
         <Body />
       </div>
     </div>
