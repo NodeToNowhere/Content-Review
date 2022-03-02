@@ -47,8 +47,6 @@ public class UserController {
     public ResponseEntity<User> putUser(@RequestBody User user, @PathVariable Long id) {
         User foundUser = userRepository.findById(id).get();
         foundUser.setUsername(user.getUsername());
-        foundUser.setPassword(user.getPassword());
-        foundUser.setEmail(user.getEmail());
         foundUser.setReviews(user.getReviews());
         userRepository.save(foundUser);
         return new ResponseEntity<>(foundUser, HttpStatus.OK);

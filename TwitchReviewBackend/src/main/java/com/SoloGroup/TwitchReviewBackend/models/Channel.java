@@ -19,17 +19,17 @@ public class Channel {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "averageRating")
+    private int averageRating;
 
     @JsonIgnoreProperties({"channel"})
     @OneToMany(mappedBy = "channel", fetch = FetchType.LAZY)
     private List<Review> reviews;
 
 
-    public Channel(String name, int rating) {
+    public Channel(String name, int averageRating) {
         this.name = name;
-        this.rating = rating;
+        this.averageRating = averageRating;
         this.reviews = new ArrayList<Review>();
     }
 
@@ -54,12 +54,12 @@ public class Channel {
         this.name = name;
     }
 
-    public int getRating() {
-        return rating;
+    public int getAverageRating() {
+        return averageRating;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setAverageRating(int averageRating) {
+        this.averageRating = averageRating;
     }
 
     public List<Review> getReviews() {

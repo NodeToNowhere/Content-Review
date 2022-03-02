@@ -19,8 +19,8 @@ public class Review {
     @Column(name = "comment")
     private String comment;
 
-    @Column(name = "upvotes")
-    private int upvotes;
+    @Column(name = "rating")
+    private int rating;
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
@@ -32,9 +32,9 @@ public class Review {
     @JsonIgnoreProperties({"reviews"})
     private Channel channel;
 
-    public Review(String comment, int upvotes, User user, Channel channel) {
+    public Review(String comment, int rating, User user, Channel channel) {
         this.comment = comment;
-        this.upvotes = upvotes;
+        this.rating = rating;
         this.user = user;
         this.channel = channel;
     }
@@ -59,12 +59,12 @@ public class Review {
         this.comment = comment;
     }
 
-    public int getUpvotes() {
-        return upvotes;
+    public int getRating() {
+        return rating;
     }
 
-    public void setUpvotes(int upvotes) {
-        this.upvotes = upvotes;
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public User getUser() {

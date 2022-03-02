@@ -47,7 +47,7 @@ public class ChannelController {
     public ResponseEntity<Channel> putChannel(@RequestBody Channel channel, @PathVariable Long id) {
         Channel foundChannel = channelRepository.findById(id).get();
         foundChannel.setName(channel.getName());
-        foundChannel.setRating(channel.getRating());
+        foundChannel.setAverageRating(channel.getAverageRating());
         foundChannel.setReviews(channel.getReviews());
         channelRepository.save(foundChannel);
         return new ResponseEntity<>(foundChannel, HttpStatus.OK);
