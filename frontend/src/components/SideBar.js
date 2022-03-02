@@ -3,7 +3,7 @@ import Channel from "./Channel";
 import "../stylesheets/SideBar.css";
 import image from "../assets/OC.png";
 
-function Sidebar({ channels, users }) {
+function Sidebar({ channels, user }) {
 
   const [sortedChannels, setSortedChannels] = useState([])
 
@@ -16,6 +16,7 @@ function Sidebar({ channels, users }) {
    setSortedChannels(channels.sort(
       (a, b) => parseFloat(b.rating) - parseFloat(a.rating)
     ))
+    console.log(sortedChannels)
    }
 
   return (
@@ -24,24 +25,24 @@ function Sidebar({ channels, users }) {
         {/* user reviews call */}
         <h5>Reviewed Channels</h5>
         <hl className="horizontal__line"></hl>
-        {users.reviews &&
-          users.reviews.map((review) => (
+        {/* {user.reviews &&
+          user.reviews.map((review) => (
             <Channel
               avatar={image}
               name={"review.channel.name"}
               rating={"review.rating"}
             />
-          ))}
+          ))} */}
         {/* High rating DB randoms */}
         <h5>Recommended Channels</h5> <hl className="horizontal__line"></hl>
-        {sortedChannels &&
+        {/* {sortedChannels &&
           sortedChannels.map((review) => (
             <Channel
               avatar={image}
               name={review.channel.name}
               rating={review.rating}
             />
-          ))}
+          ))} */}
         {/* <p className="sidebar__topShowMore">Show More</p>{" "} */}
       </div>{" "}
     </div>
