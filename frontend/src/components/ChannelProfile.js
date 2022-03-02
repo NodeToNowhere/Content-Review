@@ -10,7 +10,7 @@ function Profile({channel}) {
         <div className="profile__topLeft">
           <img src={image} alt="profile_img" />
           <div className="profile__topLeftDetails">
-            <h1>NodeToNowhere</h1>
+            <h2>{"channel.name"}</h2>
             {/* set name  */}
             <h3>100 followers</h3>
             {/* api call twitch*/}
@@ -24,10 +24,10 @@ function Profile({channel}) {
       <div className="profile__recent">
         <h2>Recent Reviews</h2>
         <div className="profile__reviewItems">
-          <ReviewItem review={"review"} user={"user"} rating={"5"} />
-          <ReviewItem review={"review"} user={"user"} rating={"5"} />
-          <ReviewItem review={"review"} user={"user"} rating={"5"} />
-          <ReviewItem review={"review"} user={"user"} rating={"5"} />{" "}
+          {channel.reviews &&
+              channel.reviews.map((review) => (
+                <ReviewItem review={"review.comment"} user={"review.user.username"} rating={"review.rating"} />
+              ))}
         </div>
       </div>
     </div>

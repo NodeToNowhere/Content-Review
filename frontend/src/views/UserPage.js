@@ -4,12 +4,12 @@ import BlankBody from "../components/BlankBody";
 import Sidebar from "../components/SideBar";
 import "./UserPage.css";
 
-function UserPage(user) {
+function UserPage({users, channels}) {
   return (
     <div className="userPage">
       <Header />
       <div className="user__main">
-        <Sidebar />
+        <Sidebar channels={channels} users={users}/>
         <BlankBody />
       </div>
     </div>
