@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/Body.css";
 import Profile from "./ChannelProfile";
-import Stream from "./Stream";
+import Stream from "./ChannelStream";
 
 function Body() {
   return (
