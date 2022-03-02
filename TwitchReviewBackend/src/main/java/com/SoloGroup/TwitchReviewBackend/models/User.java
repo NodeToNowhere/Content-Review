@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -24,9 +24,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @JsonIgnoreProperties({"user"})
+    @JsonIgnoreProperties({"user", "users"})
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    @JsonManagedReference // annotation is part of bidirectional relationship
     private List<Review> reviews;
 
     public User(String username, String password, String email) {
@@ -84,5 +83,3 @@ public class User {
     }
 
 }
-
-

@@ -23,15 +23,11 @@ public class Review {
     private int upvotes;
 
     @ManyToOne
-    @JsonIgnoreProperties({"reviews"})
-    @JoinColumn(name = "user", nullable = false)
-    @JsonBackReference // annotation is part of bidirectional relationship
+    @JsonIgnoreProperties({"review"})
     private User user;
 
     @ManyToOne
-    @JsonIgnoreProperties({"reviews"})
-    @JoinColumn(name = "channel", nullable = false)
-    @JsonBackReference  // annotation is part of bidirectional relationship
+    @JsonIgnoreProperties({"review", "reviews"})
     private Channel channel;
 
     public Review(String comment, int upvotes, User user, Channel channel) {
@@ -87,4 +83,3 @@ public class Review {
 
 
 }
-
