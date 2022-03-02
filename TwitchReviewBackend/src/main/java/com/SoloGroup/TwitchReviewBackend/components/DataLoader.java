@@ -37,11 +37,11 @@ public class DataLoader implements ApplicationRunner {
         channelRepository.save(channel3);
 
 
-        User user1 = new User("StartUpGuy", "Hunter1", "StartUpDude@gmail.com");
+        User user1 = new User("StartUpGuy");
         userRepository.save(user1);
-        User user2 = new User("StartUpGirl", "12345", "StartUpGirle@outlook.com");
+        User user2 = new User("StartUpGirl");
         userRepository.save(user2);
-        User user3 = new User("StartUp", "PaSSwOrd", "StartUp@aol.com");
+        User user3 = new User("StartUp");
         userRepository.save(user3);
 
 

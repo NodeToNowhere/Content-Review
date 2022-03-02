@@ -36,7 +36,7 @@ public class ReviewController {
     public ResponseEntity<Review> putReview(@RequestBody Review review, @PathVariable Long id) {
         Review reviewToUpdate = reviewRepository.findById(id).get();
         reviewToUpdate.setComment(review.getComment());
-        reviewToUpdate.setUpvotes(review.getUpvotes());
+        reviewToUpdate.setRating(review.getRating());
         reviewToUpdate.setUser(review.getUser());
         reviewToUpdate.setChannel(review.getChannel());
         reviewRepository.save(reviewToUpdate);
