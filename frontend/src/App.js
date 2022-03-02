@@ -2,19 +2,24 @@ import React, { useState, useEffect, Fragment } from "react";
 import "./App.css";
 import ChannelsService from "./services/ChannelService";
 import UsersService from "./services/UserService";
+import ReviewsService from "./services/ReviewService";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./views/LandingPage";
-import ChannelPage from "./views/ChannelPage";
+import AllChannelsPage from "./views/AllChannelsPage";
 import UserPage from "./views/UserPage";
-import { Switch } from "@material-ui/core";
+import ChannelPage from "./views/ChannelPage";
 
-function App (){
+function App() {
   const [channels, setChannels] = useState([]);
   const [users, setUsers] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  // Have set of images to use for demo
+
 
   useEffect(() => {
     retrieveChannels();
     retrieveUsers();
+    retrieveReviews();
   }, []);
 
   const retrieveChannels = () => {
@@ -29,15 +34,27 @@ function App (){
       console.log(response.data);
     });
   };
+  const retrieveReviews = () => {
+    ReviewsService.getAll().then((response) => {
+      setReviews(response.data);
+      console.log(response.data);
+    });
+  };
 
   return (
     <Routes>
-      <Fragment>
-        <Route exact path="/" element={<LandingPage />} />
-        <Route exact path="/channels" element={<ChannelPage />} />
-        <Route exact path="/User" element={<UserPage />} />
-      </Fragment>
+      <Route path="/" element={<LandingPage />}  />
+      <Route
+        path="/channels"
+        element={<AllChannelsPage channels={channels} />}
+      />
+      <Route
+        path="/channels/:id"
+        element={<ChannelPage />}
+        channels={channels.id}
+      />
+      <Route path="/User" element={<UserPage users={users} />} />
     </Routes>
   );
-};
+}
 export default App;

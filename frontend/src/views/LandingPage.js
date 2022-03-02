@@ -4,7 +4,7 @@ import BlankBody from "../components/BlankBody";
 import Sidebar from "../components/SideBar";
 import "./LandingPage.css"
 
-function LandingPage() {
+function LandingPage(channels) {
   return (
     <div className="landingPage">
       <Header />

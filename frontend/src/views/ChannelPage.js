@@ -4,7 +4,7 @@ import Body from "../components/Body";
 import Sidebar from "../components/SideBar";
 import "./ChannelPage.css";
 
-function ChannelPage() {
+function ChannelPage(channel) {
   return (
     <div className="channelPage">
       <Header />

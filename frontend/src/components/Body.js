@@ -3,7 +3,7 @@ import "./Body.css";
 import Profile from "./Profile";
 import Stream from "./Stream";
 
-const Body = () => {
+function Body() {
   return (
     <div className="body">
       <div className="body__left">
