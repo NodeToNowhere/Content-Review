@@ -1,7 +1,7 @@
 package com.SoloGroup.TwitchReviewBackend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 
 import javax.persistence.*;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "channel")
+@Table(name = "channels")
 public class Channel {
 
     @Id
@@ -19,18 +19,17 @@ public class Channel {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "averageRating")
+    private int averageRating;
 
     @JsonIgnoreProperties({"channel"})
     @OneToMany(mappedBy = "channel", fetch = FetchType.LAZY)
-    @JsonManagedReference // annotation is part of bidirectional relationship
     private List<Review> reviews;
 
 
-    public Channel(String name, int rating) {
+    public Channel(String name, int averageRating) {
         this.name = name;
-        this.rating = rating;
+        this.averageRating = averageRating;
         this.reviews = new ArrayList<Review>();
     }
 
@@ -55,12 +54,12 @@ public class Channel {
         this.name = name;
     }
 
-    public int getRating() {
-        return rating;
+    public int getAverageRating() {
+        return averageRating;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setAverageRating(int averageRating) {
+        this.averageRating = averageRating;
     }
 
     public List<Review> getReviews() {
@@ -70,4 +69,6 @@ public class Channel {
     public void setReviews(List<Review> reviews) {this.reviews = reviews;}
 
     public void addReview(Review review) {reviews.add(review);}
+
+
 }

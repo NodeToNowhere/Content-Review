@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -18,21 +18,13 @@ public class User {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "email")
-    private String email;
 
     @JsonIgnoreProperties({"user"})
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    @JsonManagedReference // annotation is part of bidirectional relationship
     private List<Review> reviews;
 
-    public User(String username, String password, String email) {
+    public User(String username) {
         this.username = username;
-        this.password = password;
-        this.email = email;
         this.reviews = new ArrayList<Review>();
     }
 
@@ -55,27 +47,11 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public List<Review> getReview() {
+    public List<Review> getReviews() {
         return reviews;
     }
 
-    public void setReview(List<Review> reviews) {
+    public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
 
@@ -84,5 +60,3 @@ public class User {
     }
 
 }
-
-

@@ -20,12 +20,6 @@ public class ReviewController {
 
         return new ResponseEntity<>(reviewRepository.findAll(), HttpStatus.OK);
     }
-//    public ResponseEntity<List<Review>> GetAllReviews(@RequestParam(name = "upvotes", required = false) Integer upvotes) {
-//        if (upvotes != null){
-//            return new ResponseEntity<>(reviewRepository.findAllByUpvotes(upvotes), HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(reviewRepository.findAll(), HttpStatus.OK);
-//    }
 
     @GetMapping(value = "/reviews/{id}")
     public ResponseEntity<Review> getReview(@PathVariable Long id) {
@@ -42,7 +36,7 @@ public class ReviewController {
     public ResponseEntity<Review> putReview(@RequestBody Review review, @PathVariable Long id) {
         Review reviewToUpdate = reviewRepository.findById(id).get();
         reviewToUpdate.setComment(review.getComment());
-        reviewToUpdate.setUpvotes(review.getUpvotes());
+        reviewToUpdate.setRating(review.getRating());
         reviewToUpdate.setUser(review.getUser());
         reviewToUpdate.setChannel(review.getChannel());
         reviewRepository.save(reviewToUpdate);
