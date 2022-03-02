@@ -49,7 +49,7 @@ public class UserController {
         foundUser.setUsername(user.getUsername());
         foundUser.setPassword(user.getPassword());
         foundUser.setEmail(user.getEmail());
-        foundUser.setReview(user.getReview());
+        foundUser.setReviews(user.getReviews());
         userRepository.save(foundUser);
         return new ResponseEntity<>(foundUser, HttpStatus.OK);
     }
