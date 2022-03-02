@@ -20,12 +20,6 @@ public class ReviewController {
 
         return new ResponseEntity<>(reviewRepository.findAll(), HttpStatus.OK);
     }
-//    public ResponseEntity<List<Review>> GetAllReviews(@RequestParam(name = "upvotes", required = false) Integer upvotes) {
-//        if (upvotes != null){
-//            return new ResponseEntity<>(reviewRepository.findAllByUpvotes(upvotes), HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(reviewRepository.findAll(), HttpStatus.OK);
-//    }
 
     @GetMapping(value = "/reviews/{id}")
     public ResponseEntity<Review> getReview(@PathVariable Long id) {

@@ -17,21 +17,18 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping("/users")
-    public ResponseEntity<List<User>> getAllUsers(){
-
+    @GetMapping(value = "/users")
+    public ResponseEntity getUser(
+            @RequestParam(required = false, name = "username") String username,
+            @RequestParam(required = false, name = "id") Long id
+    ){
+        if(id != null) {
+            return new ResponseEntity(userRepository.findById(id), HttpStatus.OK);
+        }
+        if(username != null) {
+            return new ResponseEntity(userRepository.findByUsername(username), HttpStatus.OK);
+        }
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
-    }
-//    public ResponseEntity<List<User>> GetAllReviews(@RequestParam(name = "email", required = false) String email) {
-//        if (email != null){
-//            return new ResponseEntity<>(userRepository.findAllByEmail(email), HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
-//    }
-
-    @GetMapping(value = "/users/{id}")
-    public ResponseEntity<User> getUser(@PathVariable Long id) {
-        return new ResponseEntity(userRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping("/users")

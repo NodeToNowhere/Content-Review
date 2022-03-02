@@ -36,6 +36,7 @@ public class DataLoader implements ApplicationRunner {
         Channel channel3 = new Channel("Dude", 2);
         channelRepository.save(channel3);
 
+
         User user1 = new User("StartUpGuy", "Hunter1", "StartUpDude@gmail.com");
         userRepository.save(user1);
         User user2 = new User("StartUpGirl", "12345", "StartUpGirle@outlook.com");
@@ -52,6 +53,15 @@ public class DataLoader implements ApplicationRunner {
 
         Review review3 = new Review("Pretty, could bell", 6, user3, channel3);
         reviewRepository.save(review3);
+
+        Review review4 = new Review("Pretty damn good, could use more cow bell", 2, user1, channel1);
+        reviewRepository.save(review4);
+
+        Review review5 = new Review("Pretty bad, could use less cow bell", 4, user2, channel2);
+        reviewRepository.save(review5);
+
+        Review review6 = new Review("Pretty, could bell", 6, user3, channel3);
+        reviewRepository.save(review6);
 
     }
 
