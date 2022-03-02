@@ -15,7 +15,6 @@ function App() {
   const [reviews, setReviews] = useState([]);
   // Have set of images to use for demo
 
-
   useEffect(() => {
     retrieveChannels();
     retrieveUsers();
@@ -43,7 +42,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />}  />
+      <Route path="/" element={<LandingPage />} />
       <Route
         path="/channels"
         element={<AllChannelsPage channels={channels} />}

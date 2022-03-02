@@ -1,6 +1,6 @@
 import React from "react";
-import "./Body.css";
-import Profile from "./Profile";
+import "../stylesheets/Body.css";
+import Profile from "./ChannelProfile";
 import Stream from "./Stream";
 
 function Body() {
@@ -12,5 +12,5 @@ function Body() {
       </div>
     </div>
   );
-};
+}
 export default Body;

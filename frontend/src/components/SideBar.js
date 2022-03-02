@@ -1,9 +1,9 @@
 import React from "react";
 import Channel from "./Channel";
-import "./SideBar.css";
+import "../stylesheets/SideBar.css";
 import image from "../assets/OC.png";
 
-const Sidebar = (channels, user) => {
+function Sidebar({channels, users}) {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -13,13 +13,12 @@ const Sidebar = (channels, user) => {
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         {/* High rating DB randoms */}
-        <h5>Recommended Channels</h5>{" "}
-        <hl className="horizontal__line"></hl>
+        <h5>Recommended Channels</h5> <hl className="horizontal__line"></hl>
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         <Channel avatar={image} name="NodeToNowhere" rating="5" />{" "}
         {/* <p className="sidebar__topShowMore">Show More</p>{" "} */}
       </div>{" "}
     </div>
   );
-};
+}
 export default Sidebar;
