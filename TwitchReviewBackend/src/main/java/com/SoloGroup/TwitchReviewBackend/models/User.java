@@ -24,7 +24,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @JsonIgnoreProperties({"user", "users"})
+    @JsonIgnoreProperties({"user"})
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Review> reviews;
 
@@ -70,11 +70,11 @@ public class User {
         this.email = email;
     }
 
-    public List<Review> getReview() {
+    public List<Review> getReviews() {
         return reviews;
     }
 
-    public void setReview(List<Review> reviews) {
+    public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
 

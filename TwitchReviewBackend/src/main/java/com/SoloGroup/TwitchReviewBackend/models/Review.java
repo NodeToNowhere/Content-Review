@@ -23,11 +23,13 @@ public class Review {
     private int upvotes;
 
     @ManyToOne
-    @JsonIgnoreProperties({"review"})
+    @JoinColumn(name="user_id", nullable = false)
+    @JsonIgnoreProperties({"reviews"})
     private User user;
 
     @ManyToOne
-    @JsonIgnoreProperties({"review", "reviews"})
+    @JoinColumn(name="channel_id", nullable = false)
+    @JsonIgnoreProperties({"reviews"})
     private Channel channel;
 
     public Review(String comment, int upvotes, User user, Channel channel) {
