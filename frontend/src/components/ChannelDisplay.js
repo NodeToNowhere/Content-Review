@@ -25,7 +25,7 @@ function ChannelDisplay({ channels }) {
                   </td>
                   <td>{channel.name}</td>
                   <td>{channel.rating}</td>
-                  <td>{channel.reviews.reviews}</td>
+                  <td>{channel.reviews[0].comment}</td>
                 </tr>
               ))}
           </tbody>
