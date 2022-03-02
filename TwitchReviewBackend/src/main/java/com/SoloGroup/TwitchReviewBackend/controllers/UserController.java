@@ -1,6 +1,7 @@
 package com.SoloGroup.TwitchReviewBackend.controllers;
 
 
+import com.SoloGroup.TwitchReviewBackend.models.Channel;
 import com.SoloGroup.TwitchReviewBackend.models.User;
 import com.SoloGroup.TwitchReviewBackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,11 @@ public class UserController {
             return new ResponseEntity(userRepository.findByUsername(username), HttpStatus.OK);
         }
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
+
+    }
+    @GetMapping(value = "/users/{id}")
+    public ResponseEntity<User> getChannel(@PathVariable Long id) {
+        return new ResponseEntity(userRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping("/users")
