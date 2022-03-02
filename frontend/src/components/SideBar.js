@@ -3,7 +3,7 @@ import Channel from "./Channel";
 import "./SideBar.css";
 import image from "../assets/OC.png";
 
-const Sidebar = () => {
+const Sidebar = (channels, user) => {
   return (
     <div className="sidebar">
       <div className="sidebar__top">

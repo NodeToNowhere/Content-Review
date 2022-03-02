@@ -2,7 +2,7 @@ import React from "react";
 import "./Stream.css";
 
 
-const Stream = () => {
+const Stream = (channel) => {
   return (
     <div className="stream">
       <div className="stream__container">

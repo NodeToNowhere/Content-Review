@@ -3,7 +3,7 @@ import "./Profile.css";
 import ReviewItem from "./ReviewItem";
 import image from "../assets/OC.png";
 
-const Profile = () => {
+const Profile = (channel) => {
   return (
     <div className="profile">
       <div className="profile__top">

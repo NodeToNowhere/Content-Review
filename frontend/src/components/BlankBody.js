@@ -1,9 +1,7 @@
 import React from "react";
 import "./Body.css";
-import Profile from "./Profile";
-import Stream from "./Stream";
 
-const Body = () => {
+function BlankBody() {
   return (
     <div className="body">
       <div className="body__left">
@@ -11,4 +9,4 @@ const Body = () => {
     </div>
   );
 };
-export default Body;
+export default BlankBody;
