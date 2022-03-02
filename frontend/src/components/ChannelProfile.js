@@ -1,9 +1,9 @@
 import React from "react";
-import "./Profile.css";
+import "../stylesheets/ChannelProfile.css";
 import ReviewItem from "./ReviewItem";
 import image from "../assets/OC.png";
 
-function Profile(channel) {
+function Profile({channel}) {
   return (
     <div className="profile">
       <div className="profile__top">
