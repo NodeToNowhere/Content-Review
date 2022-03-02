@@ -1,7 +1,7 @@
 package com.SoloGroup.TwitchReviewBackend.controllers;
 
 import com.SoloGroup.TwitchReviewBackend.models.Channel;
-import com.SoloGroup.TwitchReviewBackend.models.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.SoloGroup.TwitchReviewBackend.repositories.ChannelRepository;
 
 import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:3030")
 @RestController
 public class ChannelController {
@@ -17,17 +18,19 @@ public class ChannelController {
     ChannelRepository channelRepository;
 
 
-    @GetMapping("/channels")
-    public ResponseEntity<List<Channel>> getAllUsers(){
-
+    @GetMapping(value = "/channels")
+    public ResponseEntity getUser(
+            @RequestParam(required = false, name = "name") String name,
+            @RequestParam(required = false, name = "id") Long id
+    ){
+        if(id != null) {
+            return new ResponseEntity(channelRepository.findById(id), HttpStatus.OK);
+        }
+        if(name != null) {
+            return new ResponseEntity(channelRepository.findByName(name), HttpStatus.OK);
+        }
         return new ResponseEntity<>(channelRepository.findAll(), HttpStatus.OK);
     }
-//    public ResponseEntity<List<Channel>> getAllChannels(@RequestParam(name = "rating", required = false) Integer rating) {
-//        if (rating != null) {
-//            return new ResponseEntity<>(channelRepository.findAllByRating(rating), HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(channelRepository.findAll(), HttpStatus.OK);
-//    }
 
     @GetMapping(value = "/channels/{id}")
     public ResponseEntity<Channel> getChannel(@PathVariable Long id) {
