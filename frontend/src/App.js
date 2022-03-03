@@ -13,9 +13,6 @@ function App() {
   const [channels, setChannels] = useState([]);
   const [users, setUsers] = useState([]);
   const [reviews, setReviews] = useState([]);
-  const user = users[0]
-  // const [currentUser, setCurrentUser] = useState(users.getElementById(1));
-// const currentUser = users.getElementById(1)
   // Have set of images to use for demo
 
   useEffect(() => {
@@ -47,7 +44,6 @@ function App() {
     console.log(users);
     console.log(users[0])
     console.log(users[1])
-    console.log(users[2])
   }
   printUser();
 
@@ -56,12 +52,12 @@ function App() {
       <Route path="/" element={<LandingPage channels={channels} users={users} />} />
       <Route
         path="/channels"
-        element={<AllChannelsPage channels={channels} user={user}/>}
+        element={<AllChannelsPage channels={channels} users={users}/>}
       />
       <Route
         path="/channels/:id"
         element={<ChannelPage channels={channels} users={users}/>}
-        channels={channels.id}
+        
       />
       <Route
         path="/User"
