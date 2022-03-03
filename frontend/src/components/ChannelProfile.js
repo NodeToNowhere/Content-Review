@@ -3,7 +3,7 @@ import "../stylesheets/ChannelProfile.css";
 import ReviewItem from "./ReviewItem";
 import image from "../assets/OC.png";
 
-function Profile({channel}) {
+function Profile({channels}) {
   return (
     <div className="profile">
       <div className="profile__top">
@@ -24,8 +24,8 @@ function Profile({channel}) {
       <div className="profile__recent">
         <h2>Recent Reviews</h2>
         <div className="profile__reviewItems">
-          {channel.reviews &&
-              channel.reviews.map((review) => (
+          {channels.reviews &&
+              channels.reviews.map((review) => (
                 <ReviewItem review={"review.comment"} user={"review.user.username"} rating={"review.rating"} />
               ))}
         </div>
