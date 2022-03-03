@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ChannelsService from "./services/ChannelService";
 import UsersService from "./services/UserService";
@@ -24,35 +24,45 @@ function App() {
   const retrieveChannels = () => {
     ChannelsService.getAll().then((response) => {
       setChannels(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   };
   const retrieveUsers = () => {
     UsersService.getAll().then((response) => {
       setUsers(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   };
   const retrieveReviews = () => {
     ReviewsService.getAll().then((response) => {
       setReviews(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   };
 
+  function printUser() {
+    console.log(users);
+    console.log(users[0])
+    console.log(users[1])
+  }
+  printUser();
+
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<LandingPage channels={channels} users={users} />} />
       <Route
         path="/channels"
-        element={<AllChannelsPage channels={channels} />}
+        element={<AllChannelsPage channels={channels} users={users}/>}
       />
       <Route
         path="/channels/:id"
-        element={<ChannelPage />}
-        channels={channels.id}
+        element={<ChannelPage channels={channels} users={users}/>}
+        
       />
-      <Route path="/User" element={<UserPage users={users} />} />
+      <Route
+        path="/User"
+        element={<UserPage channels={channels} users={users}/>}
+      />
     </Routes>
   );
 }

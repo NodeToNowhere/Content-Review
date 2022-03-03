@@ -10,15 +10,15 @@ function Header() {
       <div className="header__left">
         {/* set links + routes */}
         <img className="header__leftLogo" src={image} alt="logo" />
-        <NavLink to="/" className="link" activeClassName="active" exact>
+        <NavLink to="/" className="link"  >
           <h2>Home</h2>
         </NavLink>
         <div className="header__verticalLine"></div>
-        <NavLink to="/channels" className="link" activeClassName="active" exact>
+        <NavLink to="/channels" className="link" >
           <h2>Channels</h2>
         </NavLink>
         <div className="header__verticalLine"></div>
-        <NavLink to="/user" className="link" activeClassName="active" exact>
+        <NavLink to="/user" className="link" >
           <h2>User</h2>
         </NavLink>
       </div>
