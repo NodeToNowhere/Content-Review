@@ -41,27 +41,29 @@ function App() {
   };
 
   function printUser() {
-    console.log(users);
-    console.log(users[0])
-    console.log(users[1])
+    console.log(users[0]);
+    console.log(channels[0]);
   }
   printUser();
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage channels={channels} users={users} />} />
       <Route
-        path="/channels"
-        element={<AllChannelsPage channels={channels} users={users}/>}
+        path="/"
+        element={<LandingPage channels={channels} users={users} />}
       />
       <Route
+        path="/channels"
+        element={<AllChannelsPage channels={channels} users={users} />}
+      />
+
+      <Route
         path="/channels/:id"
-        element={<ChannelPage channels={channels} users={users}/>}
-        
+        element={<ChannelPage channels={channels} users={users} />}
       />
       <Route
         path="/User"
-        element={<UserPage channels={channels} users={users}/>}
+        element={<UserPage channels={channels} users={users} />}
       />
     </Routes>
   );

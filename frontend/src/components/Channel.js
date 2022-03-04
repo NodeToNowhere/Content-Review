@@ -1,14 +1,14 @@
 import React from "react";
 import "../stylesheets/Channel.css";
-import { NavLink } from "react-router-dom";
-import OC from "../assets/OC.png"
+import { Link } from "react-router-dom";
+import OC from "../assets/OC.png";
+import { useHistory, useParams } from "react-router-dom";
 
-
-function Channel({ name, rating }) {
+function Channel({ name, rating, id }) {
   return (
     <div className="channel">
-    {/* //how to pass id??? */}
-      <NavLink to="/channels/{id}" className="channel"> 
+      {/* //how to pass id??? */}
+      <Link className="channel" to={`/channels/${id}`}>
         <img src={OC} alt="avatar" />
         <p>{name}</p>
         <p>
@@ -17,7 +17,7 @@ function Channel({ name, rating }) {
           </span>{" "}
           {rating}
         </p>
-      </NavLink>
+      </Link>
     </div>
   );
 }
