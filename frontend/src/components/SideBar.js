@@ -1,17 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Channel from "./Channel";
 import "../stylesheets/SideBar.css";
 import image from "../assets/OC.png";
 
 function Sidebar({ channels, users }) {
-
-  const [sortedChannels, setSortedChannels] = useState([])
+  const [sortedChannels, setSortedChannels] = useState([]);
 
   useEffect(() => {
     // sortChannels()
   }, []);
 
-// SORT BY RATING - FIX
+  // SORT BY RATING - FIX
   // function sortChannels() {
   //  setSortedChannels(channels.sort(
   //     (a, b) => parseFloat(b.rating) - parseFloat(a.rating)
@@ -40,8 +39,8 @@ function Sidebar({ channels, users }) {
             <Channel
               avatar={image}
               name={channel.name}
-              rating={channel.rating}
-              id={channel.id}
+              rating={channel.averageRating}
+              id={channel.name}
             />
           ))}
         {/* <p className="sidebar__ShowMore">Show More</p>{" "} */}
