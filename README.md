@@ -1,4 +1,4 @@
-# H1 Content Review - Springboot project
+# Content Review - Springboot project
 
 - A content creator review site where users can review creators on Twitch.tv
 - Each review itself has the ability to be upvoted and upvotes degrade over time.
