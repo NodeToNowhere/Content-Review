@@ -18,8 +18,8 @@ class ReviewsService {
   deleteAll() {
     return http.delete(`/reviews`);
   }
-  findByName(username) {
-    return http.get(`/reviews?title=${username}`);
-  }
+  // findByName(username) {
+  //   return http.get(`/reviews?title=${username}`);
+  // }
 }
 export default new ReviewsService();
