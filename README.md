@@ -1,8 +1,8 @@
 # Content Review - Springboot project
 
 - A content creator review site where users can review creators on Twitch.tv
-- Each review itself has the ability to be upvoted and upvotes degrade over time.
-- Uses Twitch API for finding streamers and for statistics. 
+- Each review itself has the ability to be upvoted and upvotes degrade over time
+- Uses Twitch API for finding streamers and for statistics
 
 ## **Uses:**
 
@@ -34,4 +34,4 @@
 ## **Things learned**
 
 - If using React actually create a component model before any code is written!
-- When working to a deadline and working capacity down, focus on MVP (make a list of critical tasks) and don't start forcing in unfamiliar tools and tech. 
+- When working to a deadline and working capacity down, focus on MVP (make a list of critical tasks) and don't start forcing in unfamiliar tools and tech
