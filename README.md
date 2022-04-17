@@ -4,6 +4,8 @@
 - Each review itself has the ability to be upvoted and upvotes degrade over time
 - Uses Twitch API for finding streamers and for statistics
 
+---
+
 ## **Uses:**
 
 - React
@@ -11,10 +13,14 @@
 - Axios
 - Material-ui
 
+---
+
 ## **Set up and run**
 
 - /TwitchReviewBackend is run within Java IDE that sets up springboot
 - `npm start` runs in terminal hard within /frontend 
+
+---
 
 ## **Planning**
 
@@ -26,10 +32,14 @@
 
 <img src="https://github.com/NodeToNowhere/Content-Review/blob/main/WIP_Review.PNG" width="50%" height="50%">
 
+---
+
 ## **Problems encountered**
 
 - Was supposed to be a group project but ended up being solo so had trouble finishing within time required and thus a WIP
 - Was also a consolidation of a previous Java module that due to Covid became partly a learn by doing project
+
+---
 
 ## **Things learned**
 
