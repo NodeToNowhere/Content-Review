@@ -28,6 +28,8 @@
 
 <img src="https://github.com/NodeToNowhere/Content-Review/blob/main/TwitchReview_Planning.png" width="50%" height="50%">
 
+---
+
 ## **WIP Screenshot**
 
 <img src="https://github.com/NodeToNowhere/Content-Review/blob/main/WIP_Review.PNG" width="50%" height="50%">
