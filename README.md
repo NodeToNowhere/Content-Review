@@ -18,7 +18,7 @@
 **Set up and run**
 
 - /TwitchReviewBackend is run within Java IDE that sets up springboot
-- `npm start` runs in terminal hard within /frontend 
+- `npm start` - run in terminal within /frontend 
 
 ---
 
@@ -39,10 +39,12 @@
 
 - Was supposed to be a group project but ended up being solo so had trouble finishing within time required and thus a WIP
 - Was also a consolidation of a previous Java module that due to Covid became partly a learn by doing project
+- 5 P's...
 
 ---
 
 **Things learned**
 
-- If using React actually create a component model before any code is written!
-- When working to a deadline and working capacity down, focus on MVP (make a list of critical tasks) and don't start forcing in unfamiliar tools and tech
+- If using React actually create a component model before any code is written
+- When working to a deadline and working capacity is down, focus on MVP (make a list of critical tasks) and don't start forcing in unfamiliar tools and tech
+- When using UX focused design - actually think about forms and user needs/data as to not have to edit relational databases halfway through the project
