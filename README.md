@@ -1,4 +1,4 @@
-# H1 Content Review - Spring Boot project
+# Content Review - Spring Boot project
 
 **WIP Screenshot**
 
