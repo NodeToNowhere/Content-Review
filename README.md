@@ -1,5 +1,11 @@
 # H1 Content Review - Spring Boot project
 
+**WIP Screenshot**
+
+<img src="https://github.com/NodeToNowhere/Content-Review/blob/main/WIP_Review.PNG" width="50%" height="50%">
+
+---
+
 - A content creator review site where users can review creators on Twitch.tv
 - Each review itself has the ability to be upvoted and upvotes degrade over time
 - Uses Twitch API for finding streamers and for statistics
@@ -27,11 +33,6 @@
 - Used Excalidraw to diagram and wireframe
 
 <img src="https://github.com/NodeToNowhere/Content-Review/blob/main/TwitchReview_Planning.png" width="50%" height="50%">
-
----
-**WIP Screenshot**
-
-<img src="https://github.com/NodeToNowhere/Content-Review/blob/main/WIP_Review.PNG" width="50%" height="50%">
 
 ---
 
